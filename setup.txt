@@ -1,0 +1,7 @@
+python36 -m venv stock
+source stock/bin/activate
+
+pip install matplotlib
+
+yum install tkinter
+yum install python36-tkinter
