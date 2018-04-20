@@ -26,7 +26,7 @@ def get_daily(symbol):
 
 # data = get_intraday('MSFT', '1min')
 
-data = get_daily('BNS')
+data = get_daily('AAPL')
 
 if data is not None:
 	obj = json.loads(data)
