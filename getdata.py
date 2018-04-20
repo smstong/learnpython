@@ -26,12 +26,16 @@ def get_daily(symbol):
 
 # data = get_intraday('MSFT', '1min')
 
-data = get_daily('A')
+data = get_daily('BNS')
 
 if data is not None:
 	obj = json.loads(data)
 	a = []
+	i = 0
 	for day in obj['Time Series (Daily)'].items():
+		i += 1
+		if i > 30:
+			break;
 		a.append(float(day[1]['4. close']))
 	a.reverse()
 	print(a)
